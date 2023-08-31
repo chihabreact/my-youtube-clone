@@ -15,8 +15,7 @@ const Feed = () => {
       (data) => (setVid(data.items), console.log(data.items))
     );
   }, [categorySelected]);
-  console.log("the vid :");
-  console.log(vid);
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box

@@ -19,7 +19,6 @@ const NavBar = () => (
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="logo" height={45} />
     </Link>
-    <Typography color="white">HELOO CHIHAB</Typography>
     <SearchBar></SearchBar>
   </Stack>
 );

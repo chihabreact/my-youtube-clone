@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { FetchFromAPI } from "../Utils/fetchFromApi";
-import ChannelCard from "./ChannelCard";
+import { ChannelCard, Videos } from "./index";
 
 const ChannelDetail = () => {
   const [channelDetail, setchannelDetail] = useState(null);
@@ -22,16 +22,22 @@ const ChannelDetail = () => {
   }, [id]);
 
   return (
-    <Box height="95vh" justifyContent="center" alignItems="center">
-      <div
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
-          zIndex: 10,
-          height: "300px",
-        }}
-      ></div>
-      <ChannelCard channelDetail={channelDetail}></ChannelCard>
+    <Box minHeight="95vh">
+      <Box>
+        <div
+          style={{
+            height: "300px",
+            background:
+              "linear-gradient(90deg, rgba(0,238,247,1) 0%, rgba(206,3,184,1) 100%, rgba(0,212,255,1) 100%)",
+            zIndex: 10,
+          }}
+        />
+        <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
+      </Box>
+      <Box p={2} display="flex">
+        <Box sx={{ mr: { sm: "100px" } }} />
+        <Videos videos={videos} />
+      </Box>
     </Box>
   );
 };

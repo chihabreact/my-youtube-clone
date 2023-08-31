@@ -3,7 +3,7 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { demoChannelTitle, demoProfilePicture } from "../Utils/constants";
 
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail, marginTop }) => {
   return (
     // *!  the card
     <Box
@@ -15,7 +15,8 @@ const ChannelCard = ({ channelDetail }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "-93px",
+        marginTop: marginTop,
+        zIndex: 10,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
