@@ -14,7 +14,7 @@ const App = () => (
       <Routes>
         <Route path="/" excat element={<Feed></Feed>} />
         <Route path="/video/:id" element={<VideoDetail />} />
-        <Route path="/channel/id" element={<ChannelDetail />} />
+        <Route path="/channel/:id" element={<ChannelDetail />} />
         <Route path="/search/:searchTerm" element={<SearchFeed />} />
       </Routes>
     </Box>
